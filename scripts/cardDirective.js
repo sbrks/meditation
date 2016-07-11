@@ -1,8 +1,8 @@
-angular.module('CardsAgainstAssembly')
-  .direction('wdiCard', wdiCard);
+// angular.module('CardsAgainstAssembly')
+//   .direction('wdiCard', wdiCard);
 
 
-  function wdiCard() {
-    var directive = {};
-    return directive;
-  }
+//   function wdiCard() {
+//     var directive = {};
+//     return directive;
+//   }
