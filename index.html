@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MeditateMe">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Meditate Mate</title>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="scripts/app.js"></script>
+
+
+    </head>
+    <body ng-app>
+      <div class="container">
+        <header class="navbar">
+          <h1>Meditate Me</h1>
+
+          <div class="search">Search:
+          </div>
+
+        </header>
+
+
+
+        <section id="cards" class="container-fluid" ng-controller="MeditationController as medCtrl">
+
+          <div class="row">
+
+          <div ng-view></div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="meditation in medCtrl.meditationsList" >
+
+              <div class="card card-inverse card-info text-xs-center">
+                <img class="card-img-top" src="https://image.freepik.com/free-photo/woman-meditating-in-lotus-position_1098-1435.jpg" alt="Card Image" width="200px">
+                <div class="card-block">
+                  <div class="header"><h4 class="card-header">{{meditation.meditation}}</h4></div>
+                  <h5 class="card-title">Length: {{meditation.length}}</h5>
+                  <p class="card-text">{{meditation.description}}</p>
+                  <a href="#" class="btn btn-danger">Meditate</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      <footer>
+      </footer>
+      </div>
+    </body>
+</html>

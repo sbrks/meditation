@@ -1,0 +1,21 @@
+{
+  "name": "angular-directives-lab",
+  "homepage": "https://github.com/sf-wdi-29/angular-directives-lab",
+  "authors": [
+    "SBRKS <sbrks3@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-audio": "^1.7.2"
+  }
+}
