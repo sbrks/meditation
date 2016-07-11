@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Meditate Mate</title>
+        <base href="/">
         <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
 
         <link rel="stylesheet" href="styles/style.css">
@@ -15,7 +16,6 @@
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
     <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
       <script src="scripts/app.js"></script>
-      <script src="home/home.js"></script>
 
 
     </head>
@@ -28,12 +28,14 @@
           <div class="search">Search:</div>
         </header>
 
+        <div ng-view></div>
+
         <section id="cards" class="container-fluid" ng-controller="MeditationController as meditations">
 
           <div class="row">
 
           <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="meditation in meditations.all" >
-
+      
               <div class="card card-inverse card-info text-xs-center">
                 <img class="card-img-top" src="https://image.freepik.com/free-photo/woman-meditating-in-lotus-position_1098-1435.jpg" alt="Card Image" width="200px">
 
@@ -41,7 +43,7 @@
                   <div class="header"><h4 class="card-header">{{meditation.meditation}}</h4></div>
                   <h5 class="card-title">Length: {{meditation.length}}</h5>
                   <p class="card-text">{{meditation.description}}</p>
-                  <a href="#" class="btn btn-danger">Meditate</a>
+                  <a ng-href="/meditations/{{meditation.id}}" class="btn btn-danger">Meditate</a>
                 </div>
 
 
@@ -51,6 +53,9 @@
 
           </div>
         </section>
+
+        <div ng-view>
+        </div>
 
       <footer>
       </footer>
